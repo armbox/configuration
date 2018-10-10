@@ -15,13 +15,13 @@ ECOMMERCE_ENABLE_COMPREHENSIVE_THEMING: false
 #THEMES_GIT_PATH: "edx"
 #THEMES_REPO: "edx-themes.git"
 
-ECOMMERCE_DATABASE_HOST: 'edx.devstack.mysql'
+ECOMMERCE_DATABASE_HOST: 'edx_devstack_mysql'
 ECOMMERCE_DJANGO_SETTINGS_MODULE: 'ecommerce.settings.devstack'
 ECOMMERCE_GUNICORN_EXTRA: '--reload'
-ECOMMERCE_MEMCACHE: ['edx.devstack.memcached:11211']
-ECOMMERCE_ECOMMERCE_URL_ROOT: 'http://localhost:18130'
-ECOMMERCE_LMS_URL_ROOT: 'http://edx.devstack.lms:18000'
-ECOMMERCE_DISCOVERY_SERVICE_URL: 'http://edx.devstack.discovery:18381'
+ECOMMERCE_MEMCACHE: ['edx_devstack_memcached:11211']
+ECOMMERCE_ECOMMERCE_URL_ROOT: 'http://edux.chativy.com:18130'
+ECOMMERCE_LMS_URL_ROOT: 'http://edux.chativy.com:18000'
+ECOMMERCE_DISCOVERY_SERVICE_URL: 'http://edux.chativy.com:18381'
 
 edx_django_service_is_devstack: true
 

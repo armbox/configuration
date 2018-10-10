@@ -8,7 +8,7 @@ DEVPI_PIP_CONF_PATH: /root/.pip
 DEVPI_PIP_CONF_OWNER: root
 DEVPI_PIP_CONF_GROUP: root
 
-DEVPI_HOST: edx.devstack.devpi
+DEVPI_HOST: edx_devstack_devpi
 DEVPI_PORT: 3141
 
 # http or https

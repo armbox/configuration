@@ -4,11 +4,11 @@ COMMON_GIT_PATH: 'armbox'
 COMMON_MYSQL_MIGRATE_USER: '{{ DISCOVERY_MYSQL_USER }}'
 COMMON_MYSQL_MIGRATE_PASS: '{{ DISCOVERY_MYSQL_PASSWORD }}'
 
-DISCOVERY_MYSQL: 'edx.devstack.mysql'
+DISCOVERY_MYSQL: 'edx_devstack_mysql'
 DISCOVERY_DJANGO_SETTINGS_MODULE: 'course_discovery.settings.devstack'
-DISCOVERY_ELASTICSEARCH_HOST: 'edx.devstack.elasticsearch'
+DISCOVERY_ELASTICSEARCH_HOST: 'edx_devstack_elasticsearch'
 DISCOVERY_GUNICORN_EXTRA: '--reload'
-DISCOVERY_MEMCACHE: ['edx.devstack.memcached:11211']
+DISCOVERY_MEMCACHE: ['edx_devstack_memcached:11211']
 DISCOVERY_EXTRA_APPS: ['course_discovery.apps.edx_catalog_extensions']
 
 edx_django_service_is_devstack: true
