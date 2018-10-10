@@ -236,6 +236,17 @@ error_page {{ k }} {{ v }};
     try_files $uri @proxy_to_lms_app;
   }
 
+{% if EDXAPP_CORS_ORIGIN_WHITELIST|length > 0 %}
+  location ~ ^/assets/courseware/(?P<file>.*) {
+    try_files $uri @proxy_to_lms_app;
+    add_header 'Access-Control-Allow-Origin' $cors_origin;
+    add_header 'Access-Control-Allow-Methods' 'HEAD, GET, OPTIONS';
+
+    # Inform downstream caches to take certain headers into account when reading/writing to cache.
+    add_header 'Vary' 'Accept-Encoding,Origin';
+  }
+{% endif %}
+
   # No basic auth security on the heartbeat url, so that ELB can use it
   location /heartbeat {
     # If /edx/var/nginx/server-static/maintenance_heartbeat.txt exists serve an
@@ -282,6 +293,8 @@ location ~ ^{{ EDXAPP_MEDIA_URL }}/(?P<file>.*) {
 
 {% if NGINX_DJANGO_ADMIN_ACCESS_CIDRS and EDXAPP_ENABLE_DJANGO_ADMIN_RESTRICTION %}
   location /admin {
+    real_ip_header X-Forwarded-For;
+    set_real_ip_from {{ NGINX_REAL_IP_CIDRS }};
     {% for cidr in NGINX_DJANGO_ADMIN_ACCESS_CIDRS %}
       allow {{ cidr }};
     {% endfor %}
