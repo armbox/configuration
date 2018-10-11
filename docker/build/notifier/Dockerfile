@@ -1,4 +1,4 @@
-FROM edxops/xenial-common:latest
+FROM quho/xenial-common:latest
 MAINTAINER edxops
 
 WORKDIR /edx/app/edx_ansible/edx_ansible/docker/plays

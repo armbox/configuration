@@ -1,4 +1,4 @@
-FROM edxops/xenial-common:latest
+FROM quho/xenial-common:latest
 MAINTAINER edxops
 
 USER root

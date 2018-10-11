@@ -8,7 +8,7 @@
 # with the currently checked-out configuration repo.
 
 ARG BASE_IMAGE_TAG=latest
-FROM edxops/xenial-common:${BASE_IMAGE_TAG}
+FROM quho/xenial-common:${BASE_IMAGE_TAG}
 MAINTAINER edxops
 
 ARG ARG_DEVPI_SERVER_VERSION=4.4.0
