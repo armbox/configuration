@@ -30,4 +30,6 @@ RUN sudo /edx/app/edx_ansible/venvs/edx_ansible/bin/ansible-playbook edxapp.yml 
     --extra-vars="@/devstack.yml" \
     --extra-vars="@/devstack/ansible_overrides.yml"
 
+RUN bash -c "source /edx/app/edxapp/edxapp_env && cd /edx/app/edxapp/edx-platform/ && paver update_assets --settings=devstack_docker"
+
 EXPOSE 18000 18010
