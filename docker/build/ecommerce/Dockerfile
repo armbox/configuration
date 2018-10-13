@@ -27,5 +27,5 @@ RUN sudo /edx/app/edx_ansible/venvs/edx_ansible/bin/ansible-playbook ecommerce.y
     --extra-vars="ECOMMERCE_VERSION=${OPENEDX_RELEASE}" \
     --extra-vars="@/ansible_overrides.yml" \
     --extra-vars="@/devstack/ansible_overrides.yml"
-
+RUN bash -c 'source /edx/app/ecommerce/ecommerce_env && cd /edx/app/ecommerce/ecommerce/ && make static'
 EXPOSE 18130

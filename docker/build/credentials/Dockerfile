@@ -28,4 +28,6 @@ RUN sudo /edx/app/edx_ansible/venvs/edx_ansible/bin/ansible-playbook credentials
     --extra-vars="@/ansible_overrides.yml" \
     --extra-vars="@/devstack/ansible_overrides.yml"
 
+RUN  bash -c 'source /edx/app/credentials/credentials_env && cd /edx/app/credentials/credentials && make static' -- credentials
+
 EXPOSE 18150

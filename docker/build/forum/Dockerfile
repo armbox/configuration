@@ -22,6 +22,9 @@ RUN /edx/app/edx_ansible/venvs/edx_ansible/bin/ansible-playbook forum.yml \
     -t "install:base,install:configuration,install:app-requirements,install:code" \
     --extra-vars="forum_version=${OPENEDX_RELEASE}" \
     --extra-vars="@/ansible_overrides.yml"
+
+RUN bash -c 'source /edx/app/forum/ruby_env && cd /edx/app/forum/cs_comments_service && bundle install --deployment --path /edx/app/forum/.gem/'
+
 WORKDIR /edx/app
 CMD ["/edx/app/supervisor/venvs/supervisor/bin/supervisord", "-n", "--configuration", "/edx/app/supervisor/supervisord.conf"]
 EXPOSE 4567
