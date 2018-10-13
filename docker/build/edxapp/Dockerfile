@@ -33,7 +33,7 @@ RUN sudo /edx/app/edx_ansible/venvs/edx_ansible/bin/ansible-playbook edxapp.yml 
 RUN bash -c "source /edx/app/edxapp/edxapp_env && cd /edx/app/edxapp/edx-platform/ && paver update_assets --settings=devstack_docker"
 
 # pupulate e2e course.. just for test. we need to remove it on production.
-ADD docker/build/eduxapp/course.tar.gz /tmp/
+COPY docker/build/edxapp/course.tar.gz /tmp/
 RUN bash -c 'cd /tmp && tar xzf course.tar.gz' && \
     bash -c 'source /edx/app/edxapp/edxapp_env && python /edx/app/edxapp/edx-platform/manage.py cms --settings=devstack_docker import /tmp course' && \
     bash -c 'rm /tmp/course.tar.gz' && \
