@@ -677,8 +677,8 @@ EDXAPP_JOURNALS_API_URL: "https://journals-{{ EDXAPP_LMS_BASE }}/api/v1/"
 # which access.py permission name to check in order to determine if a course about page is
 # visible. We default this to the legacy permission 'see_exists'.
 
-EDXAPP_COURSE_CATALOG_VISIBILITY_PERMISSION: 'see_exists'
-EDXAPP_COURSE_ABOUT_VISIBILITY_PERMISSION: 'see_exists'
+EDXAPP_COURSE_CATALOG_VISIBILITY_PERMISSION: 'see_in_catalog'
+EDXAPP_COURSE_ABOUT_VISIBILITY_PERMISSION: 'see_about_page'
 EDXAPP_DEFAULT_COURSE_VISIBILITY_IN_CATALOG: 'both'
 EDXAPP_DEFAULT_MOBILE_AVAILABLE: false
 
