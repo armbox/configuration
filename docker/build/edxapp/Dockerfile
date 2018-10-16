@@ -30,6 +30,8 @@ RUN sudo /edx/app/edx_ansible/venvs/edx_ansible/bin/ansible-playbook edxapp.yml 
     --extra-vars="@/devstack.yml" \
     --extra-vars="@/devstack/ansible_overrides.yml"
 
+ADD /docker/build/edxapp/edux-theme/edx-platform/edux /edx/app/edxapp/edx-platform/themes/edux
+
 RUN bash -c "source /edx/app/edxapp/edxapp_env && cd /edx/app/edxapp/edx-platform/ && paver update_assets --settings=devstack_docker"
 
 # pupulate e2e course.. just for test. we need to remove it on production.

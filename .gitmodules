@@ -1,0 +1,3 @@
+[submodule "docker/build/edxapp/edux-theme"]
+	path = docker/build/edxapp/edux-theme
+	url = git@github.com:armbox/edux-theme.git

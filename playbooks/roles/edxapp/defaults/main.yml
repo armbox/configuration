@@ -181,8 +181,8 @@ EDXAPP_PARTNER_SUPPORT_EMAIL: ''
 # ISO-8601 formatted date string, or null
 EDXAPP_AUDIT_CERT_CUTOFF_DATE: null
 
-EDXAPP_PLATFORM_NAME: 'Your Platform Name Here'
-EDXAPP_PLATFORM_DESCRIPTION: 'Your Platform Description Here'
+EDXAPP_PLATFORM_NAME: '에듀엑스'
+EDXAPP_PLATFORM_DESCRIPTION: '에듀엑스 - 미래 교육을 준비하는 서비스'
 EDXAPP_STUDIO_NAME: 'Studio'
 EDXAPP_STUDIO_SHORT_NAME: 'Studio'
 EDXAPP_ANALYTICS_DASHBOARD_NAME: "{{ EDXAPP_PLATFORM_NAME }} Insights"
@@ -768,7 +768,7 @@ EDXAPP_RETIREMENT_STATES:
 
 # Comprehensive Theming
 # Deprecated, maintained for backward compatibility
-EDXAPP_COMPREHENSIVE_THEME_DIR: ""
+EDXAPP_COMPREHENSIVE_THEME_DIR: "/edx/app/edxapp/edx-platform/themes"
 
 # list of paths to the comprehensive theme directories
 EDXAPP_COMPREHENSIVE_THEME_DIRS:
@@ -778,8 +778,8 @@ EDXAPP_COMPREHENSIVE_THEME_DIRS:
 EDXAPP_COMPREHENSIVE_THEME_LOCALE_PATHS: []
 
 # Name of the default site theme
-EDXAPP_DEFAULT_SITE_THEME: ""
-EDXAPP_ENABLE_COMPREHENSIVE_THEMING: false
+EDXAPP_DEFAULT_SITE_THEME: "edux"
+EDXAPP_ENABLE_COMPREHENSIVE_THEMING: true
 
 # Git repo for the comprehensive theme (if using a comprehensive theme
 # other than the ones bundled with edx/platform)
