@@ -32,6 +32,9 @@ RUN sudo /edx/app/edx_ansible/venvs/edx_ansible/bin/ansible-playbook edxapp.yml 
 
 ADD /docker/build/edxapp/edux-theme/edx-platform/edux /edx/app/edxapp/edx-platform/themes/edux
 
+ENV NO_PREREQ_INSTALL true
+ENV PYTHONPATH="${PYTHONPATH}:/edx/app/edxapp/edx-platform"
+RUN bash -c "source /edx/app/edxapp/edxapp_env && cd /edx/app/edxapp/edx-platform/ && pip install ."
 RUN bash -c "source /edx/app/edxapp/edxapp_env && cd /edx/app/edxapp/edx-platform/ && paver update_assets --settings=devstack_docker"
 
 # pupulate e2e course.. just for test. we need to remove it on production.
