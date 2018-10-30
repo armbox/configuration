@@ -1,7 +1,7 @@
 ---
 XQUEUE_SYSLOG_SERVER: "localhost"
-XQUEUE_RABBITMQ_HOSTNAME: "eduxRabbit"
-XQUEUE_MYSQL_HOST: "eduxMysql"
+XQUEUE_RABBITMQ_HOSTNAME: "edux-rabbit"
+XQUEUE_MYSQL_HOST: "edux-mysql"
 XQUEUE_SETTINGS: "devstack"
 xqueue_gunicorn_port: 18040
 xqueue_gunicorn_host: 0.0.0.0

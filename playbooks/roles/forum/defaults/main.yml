@@ -75,8 +75,8 @@ devstack_forum_env:
   <<: *forum_base_env
   RACK_ENV: "development"
   SINATRA_ENV: "development"
-  SEARCH_SERVER: "http://eduxElasticsearch:9200/"
-  MONGOHQ_URL: "mongodb://cs_comments_service:password@eduxMongo:27017/cs_comments_service"
+  SEARCH_SERVER: "http://edux-elasticsearch:9200/"
+  MONGOHQ_URL: "mongodb://cs_comments_service:password@edux-mongo:27017/cs_comments_service"
 
 forum_user: "forum"
 forum_ruby_version: "2.4.1"

@@ -1,9 +1,9 @@
 ---
 EDXAPP_SETTINGS: 'devstack_docker'
-EDXAPP_MEMCACHE: ['eduxMemcached:11211']
-EDXAPP_MYSQL_HOST: "eduxMysql"
+EDXAPP_MEMCACHE: ['edux-memcached:11211']
+EDXAPP_MYSQL_HOST: "edux-mysql"
 EDXAPP_MONGO_HOSTS:
-  - "eduxMongo"
+  - "edux-mongo"
 
 devstack: true
 migrate_db: false
@@ -23,7 +23,7 @@ SECURITY_UPGRADE_ON_ANSIBLE: true
 
 EDXAPP_INSTALL_PRIVATE_REQUIREMENTS: true
 
-EDXAPP_SEARCH_HOST: 'eduxElasticsearch'
+EDXAPP_SEARCH_HOST: 'edux-elasticsearch'
 
 EDXAPP_PYTHON_SANDBOX: false
 
@@ -33,10 +33,10 @@ edxapp_debian_pkgs_extra:
 
 edxapp_environment_extra:
   SELENIUM_BROWSER: 'firefox'
-  SELENIUM_HOST: 'eduxFirefox'
+  SELENIUM_HOST: 'edux-firefox'
   SELENIUM_PORT: '4444'
 
-EDXAPP_XQUEUE_URL: 'http://eduxXqueue:18040'
+EDXAPP_XQUEUE_URL: 'http://edux-xqueue:18040'
 
 EDXAPP_ENABLE_EDXNOTES: true
-EDXAPP_EDXNOTES_INTERNAL_API: 'http://eduxNotesApi:18120/api/v1'
+EDXAPP_EDXNOTES_INTERNAL_API: 'http://edux-notesApi:18120/api/v1'
