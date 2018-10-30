@@ -39,4 +39,4 @@ edxapp_environment_extra:
 EDXAPP_XQUEUE_URL: 'http://edux-xqueue:18040'
 
 EDXAPP_ENABLE_EDXNOTES: true
-EDXAPP_EDXNOTES_INTERNAL_API: 'http://edux-notesApi:18120/api/v1'
+EDXAPP_EDXNOTES_INTERNAL_API: 'http://edux-notesapi:18120/api/v1'
