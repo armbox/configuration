@@ -20,9 +20,9 @@ ECOMMERCE_DATABASE_HOST: 'edux-mysql'
 ECOMMERCE_DJANGO_SETTINGS_MODULE: 'ecommerce.settings.devstack'
 ECOMMERCE_GUNICORN_EXTRA: '--reload'
 ECOMMERCE_MEMCACHE: ['edux-memcached:11211']
-ECOMMERCE_ECOMMERCE_URL_ROOT: 'http://edux.kr:18130'
-ECOMMERCE_LMS_URL_ROOT: 'http://edux.kr:18000'
-ECOMMERCE_DISCOVERY_SERVICE_URL: 'http://edux.kr:18381'
+ECOMMERCE_ECOMMERCE_URL_ROOT: 'https://checkout.smartlearn.kr'
+ECOMMERCE_LMS_URL_ROOT: 'https://smartlearn.kr'
+ECOMMERCE_DISCOVERY_SERVICE_URL: 'https://discovery.smartlearn.kr'
 
 edx_django_service_is_devstack: true
 

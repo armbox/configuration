@@ -8,10 +8,16 @@
 # with the currently checked-out configuration repo.
 
 ARG BASE_IMAGE_TAG=latest
-FROM quho/xenial-common:${BASE_IMAGE_TAG}
+FROM edxops/xenial-common:${BASE_IMAGE_TAG}
 MAINTAINER edxops
 USER root
 CMD ["/edx/app/supervisor/venvs/supervisor/bin/supervisord", "-n", "--configuration", "/edx/app/supervisor/supervisord.conf"]
+
+# Dockerize will be useful to wait for mysql DB availability
+ENV DOCKERIZE_VERSION v0.6.1
+RUN curl -L -o dockerize.tar.gz https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+    && tar -C /usr/local/bin -xzvf dockerize.tar.gz \
+    && rm dockerize.tar.gz
 
 ADD . /edx/app/edx_ansible/edx_ansible
 WORKDIR /edx/app/edx_ansible/edx_ansible/docker/plays
